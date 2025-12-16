@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel='stylesheet' href='/styles/bootstrap.min.css' />
+      <link rel='stylesheet' href='/styles/style.css' />
+      <script src="/js/jquery-2.2.0.min.js" type="text/javascript"></script>
+      <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+      <script src="/src/ownerDashboard.js" type="text/javascript"></script>
+      <style>
+      
+        
+       
+      </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-inverse" style="padding-left:130px;">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/ownerDashboard">Dashboard</a></li>
+            <li><a href="/menuItems">Manage Menu</a></li>
+            <li><a href="/truckOrders">View Orders</a></li>
+            <li style="margin-left: 0px;"><a href="/logout">Logout</a></li>
+          </ul>
+      </nav>
+    </div>
+    
+    <div class="container">
+      <div class="page-header">
+        <div class="truck-icon">🚚</div>
+        <h1>Owner Dashboard</h1>
+        <p>Manage your food truck business</p>
+      </div>
+
+      <!-- Loading Message -->
+      <div id="loading" class="loading">
+        <p>Loading dashboard...</p>
+      </div>
+
+      <!-- Dashboard Content -->
+      <div id="dashboard-content" style="display: none;">
+        
+        <!-- Truck Info Card -->
+        <div class="truck-info-card">
+          <div class="truck-name" id="truck-name">My Food Truck</div>
+          <div>
+            <span class="truck-status" id="truck-status">Loading...</span>
+          </div>
+          
+          <div class="toggle-availability">
+            <label>Availability Status:</label>
+            <select id="availability-toggle" class="form-control" style="display: inline-block; width: auto;">
+              <option value="available">Available for Orders</option>
+              <option value="unavailable">Unavailable</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Statistics Cards -->
+        <div class="row">
+          <div class="col-md-4">
+            <div class="stats-card">
+              <div class="stats-label">Total Menu Items</div>
+              <div class="stats-number" id="total-items">0</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="stats-card">
+              <div class="stats-label">Pending Orders</div>
+              <div class="stats-number" id="pending-orders" style="color: #f0ad4e;">0</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="stats-card">
+              <div class="stats-label">Completed Orders</div>
+              <div class="stats-number" id="completed-orders" style="color: #5cb85c;">0</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="quick-actions">
+          <h3>Quick Actions</h3>
+          <button class="btn btn-success btn-lg action-btn" onclick="location.href='/addMenuItem'">
+            Add Menu Item
+          </button>
+          <button class="btn btn-primary btn-lg action-btn" onclick="location.href='/menuItems'">
+            Manage Menu
+          </button>
+          <button class="btn btn-info btn-lg action-btn" onclick="location.href='/truckOrders'">
+            View Orders
+          </button>
+        </div>
+
+        <!-- Recent Orders -->
+        <div class="recent-orders">
+          <h3>Recent Orders</h3>
+          <div id="recent-orders-list">
+            <p class="text-center" style="color: #999; padding: 20px;">No recent orders</p>
+          </div>
+          <div class="text-center" style="margin-top: 20px;">
+            <a href="/truckOrders" class="btn btn-default" style="border-radius: 10px; padding: 10px 20px; font-weight: 600;">View All Orders</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

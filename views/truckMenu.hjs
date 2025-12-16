@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel='stylesheet' href='/styles/bootstrap.min.css' />
+      <link rel='stylesheet' href='/styles/style.css' />
+      <script src="/js/jquery-2.2.0.min.js" type="text/javascript"></script>
+      <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+      <script src="/src/truckMenu.js" type="text/javascript"></script>
+      <style>
+      
+        
+        
+      </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-inverse" style="padding-left:130px;">
+          <ul class="nav navbar-nav">
+            <li><a href="/dashboard">Home</a></li>
+            <li><a href="/trucks">Browse Trucks</a></li>
+            <li><a href="/cart">View Cart</a></li>
+            <li><a href="/orders">My Orders</a></li>
+            <li style="margin-left: 0px;"><a href="/logout">Logout</a></li>
+          </ul>
+      </nav>
+    </div>
+
+    <!-- Success Message -->
+    <div id="success-message" class="success-message">
+      ✓ Item added to cart!
+    </div>
+    
+    <div class="container">
+      <div class="page-header">
+        <div class="truck-icon">🍔</div>
+        <h1 id="truck-name">Food Truck Menu</h1>
+        <p class="lead">Select items to add to your cart</p>
+        <a href="/trucks" class="btn btn-default">← Back to Trucks</a>
+      </div>
+
+      <!-- Category Filter -->
+      <div id="category-filter" class="category-filter" style="display: none;">
+        <h4>Filter by Category</h4>
+        <button class="btn btn-primary category-btn active" data-category="all">All Items</button>
+        <!-- Additional category buttons will be inserted here -->
+      </div>
+
+      <!-- Loading Message -->
+      <div id="loading" class="loading">
+        <p>Loading menu...</p>
+      </div>
+
+      <!-- Menu Items Container -->
+      <div id="menu-container">
+        <!-- Menu items will be inserted here by JavaScript -->
+      </div>
+    </div>
+
+    <!-- Hidden field to store truckId -->
+    <input type="hidden" id="truck-id" value="{{ truckId }}">
+  </body>
+</html>

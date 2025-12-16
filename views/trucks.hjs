@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel='stylesheet' href='/styles/bootstrap.min.css' />
+      <link rel='stylesheet' href='/styles/style.css' />
+      <script src="/js/jquery-2.2.0.min.js" type="text/javascript"></script>
+      <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+      <script src="/src/trucks.js" type="text/javascript"></script>
+      <style>
+       
+        
+       
+      </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-inverse" style="padding-left:130px;">
+          <ul class="nav navbar-nav">
+            <li><a href="/dashboard">Home</a></li>
+            <li class="active"><a href="/trucks">Browse Trucks</a></li>
+            <li><a href="/cart">View Cart</a></li>
+            <li><a href="/orders">My Orders</a></li>
+            <li style="margin-left: 0px;"><a href="/logout">Logout</a></li>
+          </ul>
+      </nav>
+    </div>
+    
+    <div class="container">
+      <div class="page-header">
+        <div class="truck-icon">🚚</div>
+        <h1>Browse Food Trucks</h1>
+        <p class="lead">Choose from our selection of delicious food trucks</p>
+      </div>
+
+      <!-- Loading Message -->
+      <div id="loading" class="loading">
+        <p>Loading trucks</p>
+      </div>
+
+      <!-- No Trucks Message -->
+      <div id="no-trucks" class="no-trucks" style="display: none;">
+        <h3>No Food Trucks Available</h3>
+        <p>Sorry, there are no food trucks available at the moment. Please check back later!</p>
+      </div>
+
+      <!-- Trucks Container -->
+      <div id="trucks-container" class="row">
+        <!-- Truck cards will be inserted here by JavaScript -->
+      </div>
+    </div>
+  </body>
+</html>

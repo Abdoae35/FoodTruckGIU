@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel='stylesheet' href='/styles/bootstrap.min.css' />
+      <link rel='stylesheet' href='/styles/style.css' />
+      <script src="/js/jquery-2.2.0.min.js" type="text/javascript"></script>
+      <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+      <style>
+       
+       
+      </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-inverse" style="padding-left:130px;">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/dashboard">Home</a></li>
+            <li><a href="/trucks">Browse Trucks</a></li>
+            <li><a href="/cart">View Cart</a></li>
+            <li><a href="/orders">My Orders</a></li>
+            <li style="margin-left: 0px;"><a href="/logout">Logout</a></li>
+          </ul>
+      </nav>
+    </div>
+    
+    <div class="container">
+      <div class="welcome-header">
+        
+        <h1>Welcome, {{ name }}!</h1>
+        <p>What would you like to do today?</p>
+      </div>
+
+      <!-- Quick Action Buttons -->
+      <div class="row">
+        <div class="col-md-4">
+          <div class="action-card" onclick="location.href='/trucks'">
+            <div class="action-card-icon">🚚</div>
+            <h3>Browse Trucks</h3>
+            <p>Explore available food trucks and their delicious menus</p>
+            <button class="btn">Start Browsing</button>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="action-card" onclick="location.href='/cart'">
+            <div class="action-card-icon">🗑️</div>
+            <h3>View Cart</h3>
+            <p>Review items in your cart and proceed to checkout</p>
+            <button class="btn">View Cart</button>
+          </div>
+        </div>
+        
+        <div class="col-md-4">
+          <div class="action-card" onclick="location.href='/orders'">
+            <div class="action-card-icon">📦</div>
+            <h3>My Orders</h3>
+            <p>Track your current and past orders</p>
+            <button class="btn">View Orders</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- How It Works Section -->
+      <div class="how-it-works">
+        <h2 class="text-center">How It Works</h2>
+        
+        <div class="step">
+          <h4><strong>Step 1:</strong> Browse Food Trucks</h4>
+         
+        </div>
+        
+        <div class="step">
+          <h4><strong>Step 2:</strong> Select Your Items</h4>
+         
+        </div>
+        
+        <div class="step">
+          <h4><strong>Step 3:</strong> Review Your Cart</h4>
+         
+        </div>
+        
+        <div class="step">
+          <h4><strong>Step 4:</strong> Place Your Order</h4>
+          
+        </div>
+        
+        <div class="step">
+          <h4><strong>Step 5:</strong> Enjoy Your Meal!</h4>
+          
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

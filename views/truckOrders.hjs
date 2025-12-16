@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel='stylesheet' href='/styles/bootstrap.min.css' />
+      <link rel='stylesheet' href='/styles/style.css' />
+      <script src="/js/jquery-2.2.0.min.js" type="text/javascript"></script>
+      <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+      <script src="/src/truckOrders.js" type="text/javascript"></script>
+    
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-inverse" style="padding-left:130px;">
+          <ul class="nav navbar-nav">
+            <li><a href="/ownerDashboard">Dashboard</a></li>
+            <li><a href="/menuItems">Manage Menu</a></li>
+            <li class="active"><a href="/truckOrders">View Orders</a></li>
+            <li style="margin-left: 0px;"><a href="/logout">Logout</a></li>
+          </ul>
+      </nav>
+    </div>
+    
+    <div class="container">
+      <div class="page-header">
+        <h1>📦 Truck Orders</h1>
+        <p class="lead">Manage and track your truck's orders</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs">
+        <button class="btn btn-primary filter-btn active" data-filter="all">All Orders</button>
+        <button class="btn btn-warning filter-btn" data-filter="pending">Pending</button>
+        <button class="btn btn-info filter-btn" data-filter="preparing">Preparing</button>
+        <button class="btn btn-success filter-btn" data-filter="ready">Ready</button>
+        <button class="btn btn-default filter-btn" data-filter="completed">Completed</button>
+        <button class="btn btn-danger filter-btn" data-filter="cancelled">Cancelled</button>
+      </div>
+
+      <!-- Loading Message -->
+      <div id="loading" class="loading">
+        <p>Loading orders...</p>
+      </div>
+
+      <!-- Empty State -->
+      <div id="empty-state" class="empty-state" style="display: none;">
+        <h3>No Orders Found</h3>
+        <p>You don't have any orders yet</p>
+      </div>
+
+      <!-- Orders Container -->
+      <div id="orders-container">
+        <!-- Order cards will be inserted here -->
+      </div>
+    </div>
+  </body>
+</html>
