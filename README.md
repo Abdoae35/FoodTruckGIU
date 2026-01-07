@@ -2,19 +2,6 @@
 
 ## 1. Project Title and Description
 
-### Team Members
-
-| Name | ID | Tutorial |
-|------|----|------------|
-| Mohamed Tamer      | 13003275 |  |
-| Ziad Mohame        | 7003312  |  |
-| Antonios morcos    | 13004371 |  |
-| Kevin michael      | 13002425 |  |
-| Omar ahmed sherif  | 13002837 |  |
-| Saged              | 13002815 |  |
-| Adam Hamouda       | 16004989 |  |
-| Steven joseph      | 13003145 |  |
-
 ### Description
 GIU Food Trucks is a comprehensive web application that connects food truck owners with customers. The platform enables customers to browse food trucks, view menus, place orders, and track their order status. Food truck owners can manage their menus, update availability, and process orders efficiently.
 
@@ -219,17 +206,5 @@ Open your browser and navigate to:
 
 ---
 
-## 9. Contributors
-
-| Name               | Contributions |
-|--------------------|---------------|
-| Mohamed Tamer      | Cart management APIs, Menu browsing frontend, TruckOrder view |
-| Ziad Mohamed       | Food truck  API, Menu filtering by category, Order placement backend|
-| Antonios morcos    |Order API, Truck availability management |
-| Kevin michael      | Order status updates API, Menu item CRUD operations, Owner dashboard Views,|
-| Omar ahmed sherif  | Truck owner order management, Menu management View |
-| Saged              | AddMenu Views, Truck profile management|
-| Adam Hamouda       | Menu item management APIs, Order details view, Customer interface design, Route protection, Security implementation |
-| Steven joseph      | Complete Views,Customer order interface |
 
 ---
